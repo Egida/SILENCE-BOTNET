@@ -74,3 +74,5 @@ class User:
     def get_vip_by_username(self):
         query = "SELECT vip FROM users WHERE user=%s"
         return MySQL().execute(query, (self.username))
+    
+    

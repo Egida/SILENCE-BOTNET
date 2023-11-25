@@ -9,6 +9,7 @@ from utils.plugin._check import *
 from utils.admin.uptime import *
 from utils.client.settings import *
 from utils.client.authenticator import *
+from utils.client.resolver import *
 import re
 # configuration
 
@@ -33,6 +34,8 @@ def commandes():
             case "settings":
                 cls()
                 Settings().settings()
+            case "resolver":
+                print(get_ip_tracker_all())
             case _:
                 if commandes.startswith(tuple(METHOD)) or commandes.startswith(tuple(METHOD_VIP)):
                     method = commandes.split(" ")

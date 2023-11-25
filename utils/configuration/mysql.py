@@ -50,7 +50,13 @@ class MySQL:
                 conn.commit()
                 return cursor.rowcount
 
+    def fetchall(self):
+        with self.connect() as conn:
+            with conn.cursor() as cursor:
+                return cursor.fetchall()
 
+    
+            
             
 
 
