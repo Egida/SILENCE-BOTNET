@@ -14,7 +14,7 @@ class ConfigurationsTheme:
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀{F.RED}⣀⣤⡾⠿⢿⡀{F.RESET}⠀⠀⠀⠀⣠⣶⣿⣷⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀{F.RED}⢀⣴⣦⣴⣿⡋⠀⠀⠈⢳⡄{F.RESET}⠀⢠⣾⣿⠁⠈⣿⡆⠀⠀⠀      SILENCE NETWORK [Online]
 ⠀⠀⠀⠀⠀⠀⠀{F.RED}⣰⣿⣿⠿⠛⠉⠉⠁⠀⠀⠀⠹⡄{F.RESET}⣿⣿⣿⠀⠀⢹⡇⠀⠀⠀  Type "help" for more information
-⠀⠀⠀⠀⠀{F.RED}⣠⣾⡿⠋⠁{F.RESET}⠀⠀⠀⠀⠀⠀⠀⠀⣰⣏⢻⣿⣿⡆⠀⠸⣿⠀⠀⠀  Powered by : URL
+⠀⠀⠀⠀⠀{F.RED}⣠⣾⡿⠋⠁{F.RESET}⠀⠀⠀⠀⠀⠀⠀⠀⣰⣏⢻⣿⣿⡆⠀⠸⣿⠀⠀⠀Powered by : https://t.me/silencearmy
 ⠀⠀⠀{F.RED}⢀⣴⠟⠁{F.RESET}⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣆⠹⣿⣷⠀⢘⣿⠀⠀⠀
 ⠀⠀{F.RED}⢀⡾⠁{F.RESET}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⠋⠉⠛⠂⠹⠿⣲⣿⣿⣧⠀⠀
 ⠀{F.RED}⢠⠏{F.RESET}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣿⣿⣿⣷⣾⣿⡇⢀⠀⣼⣿⣿⣿⣧⠀

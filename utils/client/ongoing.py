@@ -2,6 +2,7 @@ import getpass, pymysql, requests, socket
 from utils.plugin.commun import Color, gradient_print, Color
 from utils.plugin.variables import get_user, cls as clear
 from utils.configuration.mysql import MySQL
+from colorama import Fore as F
 
 
 username = get_user()
@@ -31,34 +32,33 @@ def ongoing():
         try:
             response = requests.get(host)
             if response.status_code == 200:
-                message = f"{Color.green}Ready"
+                message = f"{F.GREEN}Ready"
             else:
-                message = f"{Color.red}Down"
+                message = f"{F.RED}Down"
         except requests.ConnectionError:
-            message = f"{Color.red}Down"
+            message = f"{F.RED}Down"
     else:
 
         # Vérification de l'adresse IP
         try:
             socket.create_connection((host, port), timeout=2)
-            message = f"{Color.green}Ready"
+            message = f"{F.GREEN}Ready"
         except socket.error:
-            message = f"{Color.red}Down"
+            message = f"{F.RED}Down"
     clear()
     gradient_print(f"""
                               ╔═╗╦╦  ╔═╗╔╗╔╔═╗╔═╗
                               ╚═╗║║  ║╣ ║║║║  ║╣ 
-                              ╚═╝╩╩═╝╚═╝╝╚╝╚═╝╚═╝""",start_color=0x4BBEE3, end_color=Color.magenta)
-    print(f"""                             {Color.magenta}SERVER STATUS [{message}{Color.magenta}] 🚀
-                    {Color.deep_sky_blue}══╦═════════════════════════════════╦══
+                              ╚═╝╩╩═╝╚═╝╝╚╝╚═╝╚═╝""",start_color=Color.red, end_color=Color.white_smoke)
+    print(f"""                             {F.RED}SERVER STATUS [{message}{F.RED}]{F.RESET} 🚀{F.LIGHTBLACK_EX}
+                    ══╦═════════════════════════════════╦══
             ╔═════════╩═════════════════════════════════╩═════════╗
-            ║  {Color.magenta}Target {Color.red}> {Color.white_smoke}[{Color.cyan}{host}{Color.white_smoke}]{Color.deep_sky_blue}
-            ║  {Color.magenta}Port {Color.red}> {Color.white_smoke}[{Color.cyan}{port}{Color.white_smoke}]{Color.deep_sky_blue}
-            ║  {Color.magenta}Time {Color.red}> {Color.white_smoke}[{Color.cyan}{time}{Color.white_smoke}]{Color.deep_sky_blue}
-            ║  {Color.magenta}Method {Color.red}> {Color.white_smoke}[{Color.cyan}{method}{Color.white_smoke}]{Color.deep_sky_blue}
-            ║  {Color.magenta}END {Color.red}> {Color.white_smoke}[{Color.cyan}{end}{Color.white_smoke}]{Color.deep_sky_blue}
+            ║  {F.RESET}Target {F.RED}> {F.LIGHTBLACK_EX}[{F.RED}{host}{F.LIGHTBLACK_EX}]
+            ║  {F.RESET}Port {F.RED}> {F.LIGHTBLACK_EX}[{F.RED}{port}{F.LIGHTBLACK_EX}]
+            ║  {F.RESET}Time {F.RED}> {F.LIGHTBLACK_EX}[{F.RED}{time}{F.LIGHTBLACK_EX}]
+            ║  {F.RESET}Method {F.RED}> {F.LIGHTBLACK_EX}[{F.RED}{method}{F.LIGHTBLACK_EX}]
+            ║  {F.RESET}END {F.RED}> {F.LIGHTBLACK_EX}[{F.RED}{end}{F.LIGHTBLACK_EX}]
             ╚═════════════════════════════════════════════════════╝
-            
             
             
             """)

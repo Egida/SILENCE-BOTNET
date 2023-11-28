@@ -1,10 +1,8 @@
 import platform, subprocess, requests, time, os, getpass
 
-# verifier si le pc est un linux ou un windows
 def is_linux():
     return platform.system() == "Linux"
 
-# verifier si le pc est un windows
 def is_windows():
     return platform.system() == "Windows"
 

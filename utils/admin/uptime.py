@@ -30,7 +30,7 @@ class UPTIME:
     
     def get_disk_total(self):
         return str(psutil.disk_usage('/').total / (1024.**3)) + F.RESET + " GB"
-    
+        
     def main(self):
         disk_total = self.get_disk_total() 
         disk_usage = self.get_disk_usage()
@@ -38,25 +38,25 @@ class UPTIME:
         cpu_usage = self.get_cpu_usage()
         cpu_name = self.get_cpu_name()
         ram = self.get_ram()
-
         uptime = self.get_up_time()
-        print(f"""
-                        ╦ ╦╔═╗╔╦╗╦╔╦╗╔═╗
-                        ║ ║╠═╝ ║ ║║║║║╣ 
-                        ╚═╝╩   ╩ ╩╩ ╩╚═╝
-            ╔═════════════════════════════════════╗             
-          ╔═╩═════════════════════════════════════╩═╗
-            {F.RED}UPTIME : {F.GREEN}{uptime}{F.RESET}
-
-            {F.RED}DISK TOTAL : {F.GREEN}{disk_total}{F.RESET}
-            {F.RED}DISK USAGE : {F.GREEN}{disk_usage}{F.RESET}
-            
-            {F.RED}RAM TOTAL : {F.GREEN}{ram}{F.RESET} MB  
-            {F.RED}RAM USAGE : {F.GREEN}{ram_usage}{F.RESET} MB
-
-            {F.RED}CPU NAME : {F.GREEN}{cpu_name}{F.RESET}  
-            {F.RED}CPU USAGE : {F.GREEN}{cpu_usage}{F.RESET}
-          ╚═════════════════════════════════════════╝
+        print(f"""{F.RED}
               
-              
-              """)
+                      ╔═╗╦╦  ╔═╗╔╗╔╔═╗╔═╗
+                      ╚═╗║║  ║╣ ║║║║  ║╣ 
+                      ╚═╝╩╩═╝╚═╝╝╚╝╚═╝╚═╝
+        ╚══════╦════════════════════════════════╦══════╝
+   ╔═══════════╩═══{F.RESET}[https://t.me/silencearmy]{F.RED}═══╩═══════════╗                      
+   ╚╔═╗―――――――――――――――――――――――――――――――――――――――――――――――――――――╝           
+    ║#║ {F.RED} UPTIME : {F.GREEN}{uptime}{F.RED}
+    ║#║ 
+    ║U║ {F.RED} DISK TOTAL : {F.GREEN}{disk_total}{F.RED}
+    ║P║ {F.RED} DISK USAGE : {F.GREEN}{disk_usage}{F.RED}
+    ║T║ 
+    ║I║ {F.RED} RAM TOTAL : {F.GREEN}{ram}{F.RESET} MB {F.RED}
+    ║M║ {F.RED} RAM USAGE : {F.GREEN}{ram_usage}{F.RESET} MB {F.RED}
+    ║E║
+    ║#║ {F.RED} CPU NAME : {F.GREEN}{cpu_name}{F.RED}
+    ║#║ {F.RED} CPU USAGE : {F.GREEN}{cpu_usage}{F.RED}
+   ╔╚═╝―――――――――――――――――――――――――――――――――――――――――――――――――――――╗                                                       
+   ╚════════════════════════════════════════════════════════╝           
+              """)   

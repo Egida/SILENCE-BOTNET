@@ -10,6 +10,7 @@ from utils.admin.uptime import *
 from utils.client.settings import *
 from utils.client.authenticator import *
 from utils.client.resolver import *
+from utils.client.ongoing import *
 import re
 # configuration
 
@@ -18,8 +19,8 @@ theme = ConfigurationsTheme()
 
 def commandes():
     try:
-        print(f"┌⎯⎯⎯ Silence ☁ {get_user()}")
-        commandes = input("└── #➤ ")
+        print(f"{F.LIGHTBLACK_EX}┌⎯⎯⎯ [{F.LIGHTWHITE_EX} Silence ∙ {get_user()} {F.LIGHTBLACK_EX}]")
+        commandes = input("└───➤  ").lower()
         match commandes:
             case "help":
                 print("help")
@@ -30,12 +31,18 @@ def commandes():
                 cls()
                 UPTIME().main()
             case "methods":
+                cls()
                 theme.methods()
             case "settings":
                 cls()
                 Settings().settings()
             case "resolver":
+                cls()
                 print(get_ip_tracker_all())
+
+            case "ongoing":
+                cls()
+                ongoing()  
             case _:
                 if commandes.startswith(tuple(METHOD)) or commandes.startswith(tuple(METHOD_VIP)):
                     method = commandes.split(" ")

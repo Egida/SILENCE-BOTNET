@@ -18,9 +18,10 @@ mydv = pymysql.connect(
     database=db_name
 )
 
-@app.route('/silence', methods=['GET'])
+@app.route('/')
 def silence():
-    return flask.render_template('index.html')
+    name = None
+    return flask.render_template("index.html", name=name)
 
 @app.route('/ip-tracker', methods=['GET'])
 def ip_tracker():
