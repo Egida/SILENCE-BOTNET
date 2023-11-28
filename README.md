@@ -22,7 +22,7 @@ It is essential to take measures to protect against botnet attacks. Here are som
 - Use strong passwords and change them regularly.
 - Monitor network traffic and look for signs of botnet activity.
 
-![EXEMPLE : ](img/1.jpeg)
+![EXEMPLE : ](img/1.jpg)
 
 
 > Note: The use of Silence Botnet for malicious purposes is illegal. This document is provided for educational purposes only to understand the functioning of botnets and associated prevention measures.
